@@ -1,0 +1,18 @@
+<% include ../partials/header %>
+<h1><%=flowertype.name%></h1>
+
+<img src="<%= flowertype.image%>">
+
+<p><%= flowertype.description%></p>
+
+<p>
+    <a calss="btn btn-success" href="/flowertypes/<%= flowertype._id %>/comments/new">Add New Comment</a>
+</p>
+
+<% flowertype.comments.forEach(function(comment){ %>
+    <p>
+        <strong><%= comment.author %></strong> - <%= comment.text %>
+    </p>
+<% }) %>
+
+<% include ../partials/footer %>
