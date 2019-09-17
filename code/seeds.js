@@ -23,7 +23,7 @@ var data = [
 function seedDB(){
    //Remove all Flowertypes
    Flowertype.remove({}, function(err){
-        if(err){
+       if(err){
             console.log(err);
         }
         console.log("removed flowertypes!");

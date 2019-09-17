@@ -17,7 +17,7 @@ mongoose.connect("mongodb://localhost:27017/flower_types_4", {useNewUrlParser: t
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
-seedDB();
+//seedDB();
 
 //passport
 app.use(require("express-session")({

@@ -17,6 +17,9 @@
                     <h4 class="pull-right">6$/seedling</h4>
                     <h4><a><%= flowertype.name%></a></h4>
                     <p><%= flowertype.description%></p>
+                    <p>
+                        <em>Submitted By <%=flowertype.author.username%></em>
+                    </p>
                 </div>
             </div>
             <div class="well">
@@ -26,7 +29,7 @@
                 <% flowertype.comments.forEach(function(comment){ %>
                     <div class="row">
                         <div class="col-md-12"> 
-                                <strong><%= comment.author %></strong> 
+                                <strong><%= comment.author.username %></strong> 
                                 <span class="pull-right">10 days ago</span>
                                 <p><%= comment.text %></p>
                         </div>

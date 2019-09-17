@@ -25,6 +25,11 @@ router.post("/", isLoggedIn, function(req, res) {
                 if(err){
                     console.log(err);
                 }else{
+                    //add user id
+                    comment.author.id = req.user._id;
+                    comment.author.username = req.user.username;
+                    //save
+                    comment.save();
                     flowertype.comments.push(comment);
                     flowertype.save();
                     res.redirect("/flowertypes/" + req.params.id);
